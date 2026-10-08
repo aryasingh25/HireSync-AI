@@ -1,0 +1,7 @@
+.venv/
+_pycache_/
+.env
+*.pyc
+resumes/
+data/
+extracted_pdf_text.json
