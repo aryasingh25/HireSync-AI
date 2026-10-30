@@ -26,7 +26,10 @@ from google.genai import types
 # =====================================================================
 # >>> PUT YOUR GEMINI API KEY ON THE NEXT LINE (between the quotes) <<<
 load_dotenv()
-API_KEY = os.getenv("GEMINI_API_KEY")
+API_KEY = st.secrets.get(
+    "GEMINI_API_KEY",
+    os.getenv("GEMINI_API_KEY")
+)
 try:
     if not API_KEY:
     API_KEY = os.getenv("GEMINI_API_KEY")
